@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Pranay sherkar",
+      "email": "pranaysherkar45@gmail.com",
+      "password": "147852369"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Classic White T-Shirt",
+      "price": 499,
+      "description": "A comfortable, soft cotton t-shirt perfect for everyday wear.",
+      "category": "clothing",
+      "image": "https://example.com/images/white-tshirt.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 120
+      }
+    }
+  ]
+}
