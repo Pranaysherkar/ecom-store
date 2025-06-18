@@ -10,9 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.8",
+    "axios": "^1.9.0",
+    "nanoid": "^5.1.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-form-hook": "^0.0.1",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.6.2",
     "react-toastify": "^11.0.5",
     "tailwindcss": "^4.1.8"
