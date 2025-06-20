@@ -1,17 +1,22 @@
 import React, { useEffect } from "react";
-import { getAsyncUsers } from "./app/userAction";
-import {useDispatch, useSelector} from "react-redux"
+import Mainroutes from "./routes/Mainroutes";
+import Nav from "./components/Nav";
+import { asyncCurrentUser } from "./store/actions/userAction";
+import { useDispatch } from "react-redux";
 const App = () => {
   const dispatch = useDispatch();
-  const userData = useSelector((state) => state)
-  console.log(userData);
-  
-
   useEffect(() => {
-    dispatch(getAsyncUsers());
+    dispatch(asyncCurrentUser());
   }, []);
 
-  return <div className="bg-black text-white h-screen w-full">App</div>;
+  return (
+    <div className="w-full bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+      <div className="h-14 w-full">
+        <Nav />
+      </div>
+      <Mainroutes />
+    </div>
+  );
 };
 
 export default App;

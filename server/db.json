@@ -4,12 +4,41 @@
       "id": "1",
       "username": "Pranay sherkar",
       "email": "pranaysherkar45@gmail.com",
-      "password": "147852369"
+      "password": "pranay123",
+      "isAdmin": true
+    },
+    {
+      "id": "_4o6vyld_rmyx1iVUy6ov",
+      "username": "sandesh",
+      "email": "sandy@34gmail.com",
+      "password": "123456",
+      "isAdmin": false
+    },
+    {
+      "id": "taeWqnJeZXezfacGkwyca",
+      "username": "ram",
+      "email": "ram@34gmail.com",
+      "password": "123456",
+      "isAdmin": false
+    },
+    {
+      "id": "4yGXUL-8sAV1MdmTODXJE",
+      "username": "suresh",
+      "email": "suresh@23gmail.com",
+      "password": "suresh1234",
+      "isAdmin": false
+    },
+    {
+      "id": "H0-IXdzpdbSNDimGWIvhB",
+      "username": "vijay",
+      "email": "vijaysherkar45@gmail.com",
+      "password": "sddfdf",
+      "isAdmin": false
     }
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Classic White T-Shirt",
       "price": 499,
       "description": "A comfortable, soft cotton t-shirt perfect for everyday wear.",
@@ -21,5 +50,5 @@
       }
     }
   ],
-  "cart":[]
+  "carts": []
 }
