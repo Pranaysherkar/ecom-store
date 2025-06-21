@@ -2,7 +2,7 @@ import React from 'react'
 
 const UpdateProduct = () => {
   return (
-    <div>UpdateProduct</div>
+    <div className='h-screen w-full'>UpdateProduct</div>
   )
 }
 

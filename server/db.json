@@ -40,14 +40,70 @@
     {
       "id": "1",
       "title": "Classic White T-Shirt",
-      "price": 499,
+      "price": "49958585858",
       "description": "A comfortable, soft cotton t-shirt perfect for everyday wear.",
       "category": "clothing",
-      "image": "https://example.com/images/white-tshirt.jpg",
+      "image": "https://m.media-amazon.com/images/I/71MYIuYC-6L._UY1100_.jpg",
       "rating": {
         "rate": 4.5,
         "count": 120
       }
+    },
+    {
+      "id": "lvgyjunk1d160K8LZ0PQS",
+      "title": "jacket",
+      "price": "599.00",
+      "description": "This is leather black color jacket suitable for handsome mens.",
+      "category": "clothing",
+      "image": "https://m.media-amazon.com/images/I/71MYIuYC-6L._UY1100_.jpg"
+    },
+    {
+      "title": "jeans",
+      "price": "40000",
+      "description": "updateddescription ttht",
+      "category": "clothing",
+      "image": "https://m.media-amazon.com/images/I/71MYIuYC-6L._UY1100_.jpg",
+      "id": "bTZQ_9Q2P6xZssO26wOA8"
+    },
+    {
+      "id": "bTZQ_9Q2P6xZspsO26wOA8",
+      "title": "jeans",
+      "price": "899",
+      "description": "back coton jeans",
+      "category": "clothing",
+      "image": "https://m.media-amazon.com/images/I/71MYIuYC-6L._UY1100_.jpg"
+    },
+    {
+      "id": "bTZQ_9Q2P6xZssO26kwOA8",
+      "title": "jeans",
+      "price": "899",
+      "description": "back coton jeans",
+      "category": "clothing",
+      "image": "https://m.media-amazon.com/images/I/71MYIuYC-6L._UY1100_.jpg"
+    },
+    {
+      "id": "bTZQ_9Q2P6xZssO26wwOA8",
+      "title": "jeans",
+      "price": "899",
+      "description": "back coton jeans",
+      "category": "clothing",
+      "image": "https://m.media-amazon.com/images/I/71MYIuYC-6L._UY1100_.jpg"
+    },
+    {
+      "id": "bTZQ_9Q2P6xZssO2r6wOA8",
+      "title": "jeans",
+      "price": "899",
+      "description": "back coton jeans",
+      "category": "clothing",
+      "image": "https://m.media-amazon.com/images/I/71MYIuYC-6L._UY1100_.jpg"
+    },
+    {
+      "id": "bTZQ_9Q2P6xZssO26wOfA8",
+      "title": "jeans",
+      "price": "899",
+      "description": "back coton jeans",
+      "category": "clothing",
+      "image": "https://m.media-amazon.com/images/I/71MYIuYC-6L._UY1100_.jpg"
     }
   ],
   "carts": []
