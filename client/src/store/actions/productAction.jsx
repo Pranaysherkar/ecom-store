@@ -20,11 +20,20 @@ export const asyncCreateProduct = (product) => async (dispatch, getState) => {
   }
 };
 
-export const asyncUpdateProduct = (product,id) => async (dispatch, getState) => {
+export const asyncUpdateProduct =
+  (product, id) => async (dispatch, getState) => {
+    try {
+      await axios.patch(`/products/${id}`, product);
+      dispatch(asyncLoadProduct());
+      return { success: true };
+    } catch (error) {
+      return { success: false, message: error.message };
+    }
+  };
+
+export const asyncDeleteProduct = (id) => async (dispatch, getState) => {
   try {
-    console.log(product.id);
-    
-    await axios.patch(`/products/${id}`, product);
+    await axios.delete(`/products/` + id);
     dispatch(asyncLoadProduct());
     return { success: true };
   } catch (error) {

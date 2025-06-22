@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { asyncLoginUser } from "../store/actions/userAction";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
@@ -13,18 +13,19 @@ const Login = () => {
   } = useForm();
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const onSubmit = async (user) => {
     // console.log("Form Data:", user);
 
     const result = await dispatch(asyncLoginUser(user));
 
-    if (result?.success === false) {
+    if (result?.success === true) {
+      toast.success("Welcome !");
+      navigate("/products");
+    } else {
       toast.error("Invalid email or password");
-      return;
     }
-
-    toast.success("Welcome !");
   };
 
   return (

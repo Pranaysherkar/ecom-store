@@ -10,7 +10,7 @@ const Nav = () => {
     { path: "/products", name: "Products" },
   ];
 
-  const authItem = user?.email
+  const authItem = user?.isAdmin
     ? {  path: '/admin/create-product', name: 'Create Product' }
     : { path: "/login", name: "Login" };
     
