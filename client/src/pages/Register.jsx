@@ -17,10 +17,10 @@ const Register = () => {
 
   const onSubmit = async (user) => {
     user.id = nanoid();
-    user.isAdmin = false;
+    user.isAdmin =  user.userType === "seller";
     // console.log("Form Data:", user);
     const result = await dispatch(asyncRegisterUser(user));
-    
+
     if (result?.success === false) {
       toast.error(result.message);
       return;
@@ -83,6 +83,20 @@ const Register = () => {
             />
             <p className="text-sm text-red-400 min-h-[20px] mt-1">
               {errors.password?.message || " "}
+            </p>
+          </div>
+          {/* User Type Selector */}
+          <div className="flex flex-col">
+            <label className="mb-1 text-sm font-medium">Register as</label>
+            <select
+              {...register("userType", { required: "Select a user type" })}
+              className="px-4 py-2 bg-slate-800 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
+            >
+              <option value="customer">Customer</option>
+              <option value="seller">Seller</option>
+            </select>
+            <p className="text-sm text-red-400 min-h-[20px] mt-1">
+              {errors.userType?.message || " "}
             </p>
           </div>
 

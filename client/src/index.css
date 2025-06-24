@@ -28,3 +28,35 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #ccc;
 }
+@layer utilities {
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out both;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+@layer utilities {
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out both;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

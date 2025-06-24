@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -9,12 +9,13 @@ import {
 import { toast } from "react-toastify";
 
 const ProductDetail = () => {
-  const { id } = useParams();
+  const { id } = useParams();  
   const products = useSelector((state) => state.productReducer.data);
   const user = useSelector((state) => state.userReducer.data);
-  console.log(user.isAdmin);
 
-  const product = products?.find((item) => item.id === id);
+const product = useMemo(() => {
+  return products?.find((item) => item.id == id);
+}, [products, id]);
   const [editMode, setEditMode] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -62,26 +63,26 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white px-6 py-12 flex flex-col md:flex-row items-center justify-center gap-10">
+    <div className="min-h-screen w-full bg-slate-950 text-white px-6 py-12 flex flex-col md:flex-row items-center justify-center gap-10">
       {/* Image */}
-      <div className="w-full md:w-1/3 h-[450px]">
+      <div className="w-[25vw] h-[450px] rounded-lg overflow-hidden bg-white" >
         <img
           src={product.image}
           alt={product.title}
-          className="w-full h-full rounded-xl shadow-xl object-cover"
+          className="w-full h-full rounded-xl shadow-xl object-contain"
         />
       </div>
 
       {/* Product Details */}
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-full md:w-1/2 h-[450px] max-w-xl bg-slate-800 px-6 py-8 rounded-lg shadow-lg overflow-auto space-y-6"
+        className="w-[65vw] h-[450px] bg-slate-800 px-6 py-8 rounded-lg shadow-lg overflow-auto space-y-6"
       >
         {/* Title */}
         <input
           {...register("title", { required: true })}
           readOnly={!editMode}
-          className={`text-3xl font-bold w-full outline-none transition-all duration-200 ${
+          className={`text-2xl font-bold w-full outline-none transition-all duration-200 ${
             editMode ? "bg-slate-700 p-2 rounded" : "bg-transparent"
           }`}
         />
@@ -108,7 +109,7 @@ const ProductDetail = () => {
             e.target.style.height = "auto";
             e.target.style.height = e.target.scrollHeight + "px";
           }}
-          className={`text-lg text-gray-300 w-full outline-none resize-none transition-all duration-200 ${
+          className={`text-lg text-gray-300 w-full h-28 outline-none resize-none transition-all duration-200 ${
             editMode ? "bg-slate-700 p-2 rounded" : "bg-transparent opacity-75"
           }`}
         />

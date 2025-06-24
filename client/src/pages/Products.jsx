@@ -11,25 +11,29 @@ const Products = () => {
         All Products
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+      <div className="w-full flex flex-wrap gap-8 justify-center ">
         {products.map((item) => (
           <Link
-          to={`/product/${item.id}`}
+            to={`/product/${item.id}`}
             key={item.id}
-            className="bg-slate-800 rounded-xl overflow-hidden shadow-md border border-slate-700 flex flex-col"
+            className="bg-slate-800 rounded-xl w-1/6 h-[50vh] overflow-hidden shadow-md border border-slate-700 flex flex-col "
           >
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-48 sm:h-52 object-cover"
-            />
-            <div className="p-4 text-white flex flex-col justify-between h-full">
+            <div className="w-full h-1/2 overflow-hidden aspect-square">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-contain bg-white"
+              />
+            </div>
+            <div className="p-4 h-1/2 text-white flex flex-col justify-between ">
               <div>
                 <h3 className="text-base sm:text-lg font-semibold line-clamp-1">
                   {item.title}
                 </h3>
                 <p className="text-sm text-slate-400">{item.category}</p>
-                <p className="text-sm mt-1 line-clamp-2">{item.description.slice(0, 60)} ... </p>
+                <p className="text-sm mt-1 line-clamp-2">
+                  {item.description.slice(0, 60)} ...{" "}
+                </p>
               </div>
 
               <div className="flex justify-between items-center pt-3">
@@ -38,7 +42,7 @@ const Products = () => {
                 </span>
                 <div className="flex gap-2">
                   <button className="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs rounded-md">
-                    Cart
+                   Add to Cart
                   </button>
                   <button className="px-3 py-1 bg-sky-500 hover:bg-sky-600 text-white text-xs rounded-md">
                     Buy
