@@ -5,29 +5,33 @@ const images = [
   {
     id: 1,
     url: "https://i.pinimg.com/736x/7e/60/46/7e6046133227695d237c3cd736dfe9fe.jpg",
-    alt: "Stylish headphones",
+    alt: "image",
   },
   {
     id: 2,
     url: "https://i.pinimg.com/736x/dc/0c/43/dc0c439c18d3beb37e36dba04ca0dd4b.jpg",
-    alt: "Smartwatch on hand",
+    alt: "image",
   },
   {
     id: 3,
-    url: "https://i.pinimg.com/736x/ac/a2/0d/aca20d89669917ba0cb8af318e05b1d0.jpg",
-    alt: "Modern sneakers",
+    url: "https://i.pinimg.com/736x/e2/02/cc/e202cc42f69f6b2512d2d24f3dd93aed.jpg",
+    alt: "image",
   },
   {
     id: 4,
     url: "https://i.pinimg.com/736x/dc/18/92/dc189244056d58866550db74a076da51.jpg",
-    alt: "Sunglasses with sunlight",
+    alt: "image",
   },
+  {
+    id: 5,
+    url: "https://i.pinimg.com/736x/26/2a/2f/262a2f417a6c45f1356fa0299793f0f0.jpg",
+    alt: "image",
+  }
 ];
 
 const Home = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
-  // Auto-change background every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
